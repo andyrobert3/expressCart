@@ -1,7 +1,9 @@
 .search-bar-input, #frm_search, .search-bar-input .btn{
     padding-top: 10px;
     height: 45px;
-}
+    width: auto;
+    /* left: 50%; */
+}   
 
 .searchMenuLocation-side {
     padding-right: 0;
@@ -55,6 +57,13 @@
     background-color: #cc4135 !important;
 }
 
+.brand-image {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .navbar-brand{
     color: #cc4135 !important;
     letter-spacing: 4px;
@@ -64,7 +73,7 @@
     font-size: 55px !important;
 }
 
-.navbar-brand-image, .navbar-brand{
+.navbar-brand-image, .d-brand{
     height: 80px;
     padding-left: 10px;
     padding-top: 10px;
@@ -101,6 +110,12 @@
 }
 
 @media only screen and (max-width: 768px){
+    .brand-image {
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     .navbar-default .navbar-brand {
         padding-top: 10px;
     }

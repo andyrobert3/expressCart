@@ -88,7 +88,9 @@
 						<span class="icon-bar"></span>
 					</button>
                     {{#if admin}}
-                        <a class="navbar-brand navbar-brand-image" href="/admin"><img class="img-responsive" src="/images/logo-admin.png"></a>
+                        <a class="navbar-brand navbar-brand-image" href="/admin">
+                            <img class="img-responsive" src="/images/logo-bank.png">
+                        </a>
                     {{else}}
                         {{#isNull config.cartLogo}}
                             {{#isNull config.cartTitle}}
@@ -101,6 +103,15 @@
                         {{/isNull}}
                     {{/if}}
 				</div>
+
+                <div class="brand-image">
+                    {{#unless admin}}
+                        <a class="navbar-brand navbar-brand-image" href="/">
+                            <img class="img-responsive" src="/images/logo-bank.png">
+                        </a>
+                    {{/unless}}
+                </div>
+
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
                         {{#unless admin}}
@@ -117,6 +128,8 @@
                         {{#if session.user}}
 							<li><a href="/admin/logout"><i class="fa fa-sign-out" aria-hidden="true"> </i>Logout</a></li>
 						{{/if}}
+                        
+
 					</ul>
 				</div>
 	        </div>
@@ -151,7 +164,7 @@
             <footer class="footer">
                 <div class="container-fluid">
                     {{#isNull config.footerHtml}}
-                        <h4 class="text-center">Powered by expressCart</h4>
+                        <h4 class="text-center">Powered by AcmeBank</h4>
                     {{else}}
                         {{{config.footerHtml}}}
                     {{/isNull}}
